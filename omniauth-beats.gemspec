@@ -3,13 +3,14 @@ $:.push File.expand_path('../lib', __FILE__)
 require 'omniauth/beats/version'
 
 Gem::Specification.new do |s|
-  s.name     = 'omniauth-beats'
-  s.version  = OmniAuth::Beats::VERSION
-  s.authors  = ['Lee Martin']
-  s.email    = ['hi@leemartin.com']
-  s.summary  = 'Beats Music strategy for OmniAuth'
-  s.homepage = 'https://github.com/leemartin/omniauth-beats'
-  s.license = 'MIT'
+  s.name        = 'omniauth-beats'
+  s.version     = OmniAuth::Beats::VERSION
+  s.authors     = ['Lee Martin']
+  s.email       = ['hi@leemartin.com']
+  s.summary     = 'Beats Music strategy for OmniAuth'
+  s.description = 'Beats Music strategy for OmniAuth'
+  s.homepage    = 'https://github.com/leemartin/omniauth-beats'
+  s.license     = 'MIT'
 
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
