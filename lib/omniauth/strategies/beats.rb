@@ -28,6 +28,11 @@ module OmniAuth
         user_id = access_token.get('/v1/api/me').parsed["result"]["user_context"]
         @user_data ||= access_token.get("/v1/api/users/#{ user_id }").parsed["data"]
       end
+
+      # Workaround for for https://github.com/intridea/omniauth-oauth2/issues/28
+      def callback_url
+        full_host + script_name + callback_path + query_string
+      end
     end
   end
 end
